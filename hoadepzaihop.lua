@@ -1,6 +1,12 @@
-repeat task.wait() until game:IsLoaded()
-local t=game:GetService("TeleportService")
-local p=game.Players.LocalPlayer
-while task.wait(3) do
-t:Teleport(game.PlaceId,p)
-end
+repeat wait() until game:IsLoaded()
+
+local player = game.Players.LocalPlayer
+
+print("Script loaded!")
+
+-- test menu
+game.StarterGui:SetCore("SendNotification",{
+Title="Script",
+Text="Loaded thành công!",
+Duration=5
+})
