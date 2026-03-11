@@ -1,14 +1,15 @@
-
 repeat wait() until game:IsLoaded()
 
+local TeleportService = game:GetService("TeleportService")
 local player = game.Players.LocalPlayer
 
-print("Script loaded!")
-
 game.StarterGui:SetCore("SendNotification", {
-Title="Script",
-Text="Loaded thành công!",
+Title="hoadepzai",
+Text="Đang hop server...",
 Duration=5
 })
 
-print("test")
+while true do
+    wait(5)
+    TeleportService:Teleport(game.PlaceId, player)
+end
